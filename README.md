@@ -110,3 +110,22 @@ rm -rf ./install
 1. [Tips](https://www.linux.com/topic/networking/advanced-dnsmasq-tips-and-tricks/)
 2. [Arch Docs](https://wiki.archlinux.org/title/Dnsmasq#DNS_server)
 3. [AWS Custom DNS](https://repost.aws/knowledge-center/dns-resolution-failures-ec2-linux)
+4. [Amazon DNS](https://docs.aws.amazon.com/vpc/latest/userguide/AmazonDNS-concepts.html#vpc-private-hosted-zones)
+
+### Route53
+
+1. [AWS Endpoints](https://docs.aws.amazon.com/general/latest/gr/r53.html)
+2. [AWS Service Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints)
+3. [AWS CLI Reference](https://docs.aws.amazon.com/cli/latest/reference/route53/)
+
+### OpenShift
+
+#### AWS
+
+1. [AWS IPI](https://docs.openshift.com/container-platform/4.16/installing/installing_aws/ipi/ipi-aws-preparing-to-install.html)
+2. [AWS UPI in Restricted Network](https://docs.openshift.com/container-platform/4.16/installing/installing_aws/upi/installing-restricted-networks-aws.html)
+
+#### AWS
+
+1. [Feature for customer managed DNS in AWS](https://issues.redhat.com/browse/OCPSTRAT-992)
+2. [Epic for customer managed DNS](https://issues.redhat.com/browse/CORS-1874)
