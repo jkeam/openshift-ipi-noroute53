@@ -1,0 +1,44 @@
+---
+additionalTrustBundlePolicy: Proxyonly
+apiVersion: v1
+baseDomain: jkeam.com
+compute:
+- architecture: amd64
+  hyperthreading: Enabled
+  name: worker
+  replicas: 0
+controlPlane:
+  architecture: amd64
+  hyperthreading: Enabled
+  name: master
+  replicas: 1
+metadata:
+  name: hello
+networking:
+  clusterNetwork:
+  - cidr: 10.128.0.0/14
+    hostPrefix: 23
+  machineNetwork:
+  - cidr: 10.0.0.0/16
+  networkType: OVNKubernetes
+  serviceNetwork:
+  - 172.30.0.0/16
+credentialsMode: Manual
+platform:
+  aws:
+    region: us-east-2
+    subnets:
+    - subnet-<replace>
+    serviceEndpoints:
+    - name: ec2
+      url: https://ec2.us-east-2.amazonaws.com
+    - name: elasticloadbalancing
+      url: https://elasticloadbalancing.us-east-2.amazonaws.com
+    - name: tagging
+      url: https://tagging.us-east-2.amazonaws.com 
+    - name: route53
+      url: https://route53.amazonaws.com
+publish: Internal
+pullSecret: <pull_secret_here>
+sshKey: |
+  ssh-rsa <key_here>
