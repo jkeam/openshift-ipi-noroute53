@@ -20,7 +20,7 @@ OpenShift IPI on AWS with no Route53
 
 ```shell
 sudo dnf install dnsmasq
-scp ./dns/dnsmasq.conf dnsserver:/etc/dnsmasq.conf 
+scp ./dns/dnsmasq.conf dnsserver:/etc/dnsmasq.conf
 sudo systemctl restart dnsmasq.service
 sudo systemctl enable dnsmasq.service
 ```
@@ -129,3 +129,7 @@ rm -rf ./install
 
 1. [Feature for customer managed DNS in AWS](https://issues.redhat.com/browse/OCPSTRAT-992)
 2. [Epic for customer managed DNS](https://issues.redhat.com/browse/CORS-1874)
+
+## Note
+
+You will see keys in the `secrets` dir.  If you base64 decode them you will see they are just junk.
